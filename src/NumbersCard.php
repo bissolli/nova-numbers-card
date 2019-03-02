@@ -53,9 +53,10 @@ class NumbersCard extends Card
     public function jsonSerialize(): array
     {
         return array_merge([
-            'width'   => $this->width,
-            'number'   => $this->number,
-            'title'   => $this->title,
+            'name' => str_random(16),
+            'width' => $this->width,
+            'number' => $this->number,
+            'title' => $this->title,
         ], parent::jsonSerialize());
     }
 }
